@@ -12,6 +12,7 @@ int main()
    {
       cout << "how old are you? ";
       cin >> age;
+      cin.clear();
       cin.ignore(80,'\n');
       cout << "your name is " << name << " and you are " 
            << age << " years old." << endl;
