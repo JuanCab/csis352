@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include <iomanip>
-#include "circle.h"
+#include "circle_template.h"
 using namespace std;
 
 int main()
@@ -39,36 +39,36 @@ int main()
    cout << endl;
 
 // UNCOMMENT FOLLOWING CODE ONCE YOU HAVE THE OPERATORS DEFINED
-   cout << "Are the two circles equal?  ";
-   if (c1 == c2)
-      cout << "equal" << endl;
-   else
-      cout << "not equal" << endl;
+//    cout << "Are the two circles equal?  ";
+//    if (c1 == c2)
+//       cout << "equal" << endl;
+//    else
+//       cout << "not equal" << endl;
 
-   cout << "Define a third circle as the sum of the first two" << endl;
-   Circle c3;
-   c3 = c1 + c2;
-   cout << c3 << endl ;
-   cout << endl;
+//    cout << "Define a third circle as the sum of the first two" << endl;
+//    Circle c3;
+//    c3 = c1 + c2;
+//    cout << c3 << endl ;
+//    cout << endl;
 
-   cout << "Set third circle equal to first, then set radius to 4.67 using = operator" << endl;
-   c3 = c1;
-   c3 = 4.67;
-   cout << c3 << endl;
-   cout << endl;
+//    cout << "Set third circle equal to first, then set radius to 4.67 using = operator" << endl;
+//    c3 = c1;
+//    c3 = 4.67;
+//    cout << c3 << endl;
+//    cout << endl;
 
-   cout << "Show precedence works by setting all three circles =4" << endl;
-   c1 = c2 = c3 = 4;
-   cout << "c1 has ";
-   cout << c1 << endl;
-   cout << "c2 has ";
-   cout << c2 << endl;
-   cout << "c3 has ";
-   cout << c3 << endl;
-   cout << endl;
+//    cout << "Show precedence works by setting all three circles =4" << endl;
+//    c1 = c2 = c3 = 4;
+//    cout << "c1 has ";
+//    cout << c1 << endl;
+//    cout << "c2 has ";
+//    cout << c2 << endl;
+//    cout << "c3 has ";
+//    cout << c3 << endl;
+//    cout << endl;
 
-   cout << "Set radius of third circle to 5" << endl;
-   c3.setRadius(5);
-   cout << c3 << endl;
-   return 0;
+//    cout << "Set radius of third circle to 5" << endl;
+//    c3.setRadius(5);
+//    cout << c3 << endl;
+//    return 0;
 }
