@@ -6,26 +6,26 @@
 
 CC=g++
 OBJECTS=main.o circle.o
-OBJECTS_TEMPLATE = main_template.o circle_template.o
+OBJECTS_INIT = main_initial.o circle_initial.o
 EXE=circle
-EXE_TEMPLATE = circle_template
+EXE_INIT = circle_initial
 CFLAGS=-fno-diagnostics-color -Wall
 LFLAGS=
 
 $(EXE):		$(OBJECTS)
 			$(CC) $(CFLAGS) -o $(EXE) $(OBJECTS) $(LFLAGS)
 			rm -rf $(OBJECTS)
-$(EXE_TEMPLATE):		$(OBJECTS_TEMPLATE)
-			$(CC) $(CFLAGS) -o $(EXE_TEMPLATE) $(OBJECTS_TEMPLATE) $(LFLAGS)
-			rm -rf $(OBJECTS_TEMPLATE)
+$(EXE_INIT):		$(OBJECTS_INIT)
+			$(CC) $(CFLAGS) -o $(EXE_INIT) $(OBJECTS_INIT) $(LFLAGS)
+			rm -rf $(OBJECTS_INIT)
 main.o: 		main.cpp circle.h
 			$(CC) $(CFLAGS) -c main.cpp
 circle.o:	circle.cpp circle.h
 			$(CC) $(CFLAGS) -c circle.cpp
-main_template.o: 		main_template.cpp circle_template.h
-			$(CC) $(CFLAGS) -c main_template.cpp
-circle_template.o:	circle_template.cpp circle_template.h
-			$(CC) $(CFLAGS) -c circle_template.cpp
+main_initial.o: 		main_initial.cpp circle_initial.h
+			$(CC) $(CFLAGS) -c main_initial.cpp
+circle_initial.o:	circle_initial.cpp circle_initial.h
+			$(CC) $(CFLAGS) -c circle_initial.cpp
 clean:
-			rm -rf $(OBJECTS) $(OBJECTS_TEMPLATE) $(EXE) $(EXE_TEMPLATE)
+			rm -rf $(OBJECTS) $(OBJECTS_INIT) $(EXE) $(EXE_INIT)
 
