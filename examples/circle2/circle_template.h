@@ -7,9 +7,7 @@
 #ifndef _CIRCLE_H_
 #define _CIRCLE_H_
 
-#include <iostream>
 const double PI = 3.141592654;
-using namespace std;
 
 class Circle
 {
@@ -24,5 +22,4 @@ class Circle
       double rad;
 };
 
-istream& operator>>(istream&,Circle&);
 #endif
