@@ -12,7 +12,7 @@ const double PI = 3.141592654;
 class Circle
 {
    public:
-      Circle(double=0);  // constructor with default radius
+      Circle(double r=0);  // constructor with default radius
       void setRadius(double);
       double radius() const;
       double diameter() const;
