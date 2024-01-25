@@ -1,5 +1,5 @@
 // File:     main.cpp
-// Author:   Dan Brekke
+// Author:   Dan Brekke with tweaks by Juan Cabanela
 
 // Description
 // This program will test the circle class

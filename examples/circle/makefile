@@ -1,12 +1,11 @@
 # File:     makefile
-# Author:   Dan Brekke
 
 # Description
 # This makefile will make the example program of a circle class
 
 CC=g++
 OBJECTS=main.o circle.o
-EXE=prog
+EXE=circle
 CFLAGS=-fno-diagnostics-color -Wall
 LFLAGS=
 
@@ -17,5 +16,5 @@ main.o: 		main.cpp circle.h
 circle.o:	circle.cpp circle.h
 				$(CC) $(CFLAGS) -c circle.cpp
 clean:
-				rm -rf prog *~ $(OBJECTS) $(EXE)
+				rm -rf $(EXE) *~ $(OBJECTS) $(EXE)
 
