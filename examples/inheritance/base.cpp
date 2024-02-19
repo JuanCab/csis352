@@ -3,23 +3,21 @@
 
 Base::Base(double value) : X(value)
 {
-   cout << "in the Base constructor\n";
-} 
- 
+    cout << "in the Base constructor\n";
+}
+
 void Base::setX(double value)
 {
-   X = value;
+    X = value;
 }
 
 double Base::getX() const
 {
-   return X;
+    return X;
 }
 
 void Base::print() const
 {
-   cout << "Base print()\n";
-   cout << "   X = " << getX() << endl;
+    cout << "Base print()\n";
+    cout << "   X = " << getX() << endl;
 }
-
-

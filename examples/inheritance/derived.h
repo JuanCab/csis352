@@ -4,12 +4,13 @@
 
 class Derived : public Base
 {
-   public:
-      Derived(double val1, double val2);
-      void setY(double);
-      double getY() const;
-      void print() const;
-   private:
-      double Y;
+public:
+    Derived(double val1, double val2);
+    void setY(double);
+    double getY() const;
+    void print() const;
+
+private:
+    double Y;
 };
 #endif
