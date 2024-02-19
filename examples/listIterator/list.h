@@ -16,7 +16,7 @@ namespace ListNameSpace
     {
     public:
         explicit List(int size = 99);
-        ~List();                             // destructor
+        ~List();                              // destructor
         List(const List &);                  // copy constructor
         const List &operator=(const List &); // operator =
         bool empty() const;
@@ -140,7 +140,7 @@ namespace ListNameSpace
 
     private:
         T *current;
-    };
+    }; 
 
     template <class T>
     const listIterator<T> listIterator<T>::operator+(int inc) const
