@@ -1,21 +1,21 @@
 #include "derived.h"
 
-Derived::Derived(double val1, double val2) : Base(val1), Y(val2)
-{ }
-
-void Derived::setY(double val)
+Derived::Derived(double value1, double value2) : Base(value1), Y(value2)
 {
-   Y = val;
+}
+
+void Derived::setY(double value)
+{
+    Y = value;
 }
 
 double Derived::getY() const
 {
-   return Y;
+    return Y;
 }
 
 void Derived::print() const
 {
-   Base::print();
-   cout << "Y = " << getY() << endl;
+    Base::print();
+    cout << "Y = " << getY() << endl;
 }
-

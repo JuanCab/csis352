@@ -1,20 +1,21 @@
 #include <iostream>
 #include "base.h"
 
-Base::Base(double val) : X(val)
-{}
-
-void Base::setX(double val)
+Base::Base(double value) : X(value)
 {
-   X = val;
+}
+
+void Base::setX(double value)
+{
+    X = value;
 }
 
 double Base::getX() const
 {
-   return X;
+    return X;
 }
 
 void Base::print() const
 {
-   cout << "X = " << getX() << endl;
+    cout << "X = " << getX() << endl;
 }
