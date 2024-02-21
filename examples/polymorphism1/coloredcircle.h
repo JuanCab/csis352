@@ -6,16 +6,17 @@
 
 class ColoredCircle : public Circle
 {
-   public:
-      ColoredCircle(double r=0, colors c=black);
-      ColoredCircle(colors color);
-      ColoredCircle(const Circle&);
-      ColoredCircle& operator=(const Circle& c);
-      void operator=(Circle*);
-      void setColor(colors);
-      colors Color() const;
-      virtual void Display() const;
-   private:
-      colors color;
+public:
+    ColoredCircle(double r=0, colors c=black);
+    ColoredCircle(colors color);
+    ColoredCircle(const Circle &);
+    ColoredCircle &operator=(const Circle &c);
+    void operator=(Circle *);
+    void setColor(colors);
+    colors Color() const;
+    virtual void Display() const;
+
+private:
+    colors color;
 };
 #endif

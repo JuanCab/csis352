@@ -1,22 +1,26 @@
-OBJECTS=main.o circle.o coloredcircle.o colors.o
 CC=g++
-CFLAGS=-fno-diagnostics-color
+CFLAGS=
 LFLAGS=
+EXE = prog
+OBJECTS=main.o circle.o coloredcircle.o colors.o
 
-prog:		$(OBJECTS)
+$(EXE): $(OBJECTS)
 		$(CC) -o prog $(OBJECTS) $(LFLAGS)
 
-main.o:		main.cpp circle.o coloredcircle.o
+main.o: main.cpp circle.o coloredcircle.o
 		$(CC) $(CFLAGS) -c main.cpp
 
-circle.o:	circle.cpp circle.h
+circle.o: circle.cpp
 		$(CC) $(CFLAGS) -c circle.cpp
 
-colors.o:	colors.cpp colors.h
+colors.o: colors.cpp
 		$(CC) $(CFLAGS) -c colors.cpp
 
-coloredcircle.o:	coloredcircle.cpp coloredcircle.h circle.o
+coloredcircle.o: coloredcircle.cpp
 		$(CC) $(CFLAGS) -c coloredcircle.cpp
 
+install: $(EXE)
+		rm -rf $(OBJECTS) *~
+
 clean:
-		rm -rf $(OBJECTS) *~ prog
+		rm -rf $(OBJECTS) *~ $(EXE)
