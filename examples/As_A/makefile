@@ -12,3 +12,6 @@ main.o:		main.cpp stackType.h
 
 clean:
 		rm -rf $(OBJECTS) $(EXE) *~
+
+install:	$(EXE)
+		rm -rf $(OBJECTS) *~

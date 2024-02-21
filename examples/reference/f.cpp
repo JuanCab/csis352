@@ -6,31 +6,32 @@ using namespace std;
 
 class someclass
 {
-   public:
-      someclass(const string&);
-      const string& getData();
-   private:
-      string data;
+public:
+    someclass(const string &);
+    const string &getData();
+
+private:
+    string data;
 };
 
-someclass::someclass(const string& s)
+someclass::someclass(const string &s)
 {
-   data = s;
+    data = s;
 }
 
-const string& someclass::getData()
+const string &someclass::getData()
 {
-   return data;
+    return data;
 }
 
 int main()
 {
-   someclass s("hello");
-   cout << s.getData() << endl;
-   const string& x = s.getData();
-   cout << x << endl;
-//   x = "oops";
-//   cout << s.getData() << endl;
+    someclass s("hello");
+    cout << s.getData() << endl;
+    const string &x = s.getData();
+    cout << x << endl;
+    //   x = "oops";
+    //   cout << s.getData() << endl;
 
-   return 0;
+    return 0;
 }
