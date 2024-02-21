@@ -3,8 +3,11 @@
 #include <iostream>
 using namespace std;
 
-enum colors {black, white, red, blue, green, yellow};
+enum colors
+{
+    black, white, red, blue, green, yellow
+};
 
-ostream& operator << (ostream& o, colors c);
+ostream &operator<<(ostream &o, colors c);
 
 #endif
