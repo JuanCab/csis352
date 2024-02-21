@@ -8,11 +8,11 @@ using namespace std;
 
 int main()
 {
-   Display* display = new vt100;
-   playingCard card(11,Clubs);
-   display->clearDisplay();
-   display->setDisplayPosition(10,10);
-   display->show(card);
-   display->setDisplayPosition(23,1);
-   return 0;
+    Display *display = new vt100;
+    playingCard card(11, Clubs);
+    display->clearDisplay();
+    display->setDisplayPosition(10, 10);
+    display->show(card);
+    display->setDisplayPosition(23, 1);
+    return 0;
 }

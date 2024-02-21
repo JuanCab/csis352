@@ -1,24 +1,28 @@
 CC=g++
-CFLAGS=-fno-diagnostics-color
+CFLAGS=
 OBJECTS=circle.o shape.o main.o rectangle.o square.o
+EXE=prog
 
-prog:		$(OBJECTS)
-		$(CC) $(CFLAGS) -o prog $(OBJECTS)
+$(EXE): $(OBJECTS)
+		$(CC) $(CFLAGS) -o $(EXE) $(OBJECTS)
 
-main.o:		main.cpp circle.o shape.o rectangle.o square.o
+main.o: main.cpp circle.o shape.o rectangle.o square.o
 		$(CC) $(CFLAGS) -c main.cpp
 
-circle.o:	circle.cpp circle.h shape.h shape.cpp
+circle.o: circle.cpp shape.cpp
 		$(CC) $(CFLAGS) -c circle.cpp
 
-rectangle.o:	rectangle.cpp rectangle.h shape.h shape.cpp
+rectangle.o: rectangle.cpp shape.cpp
 		$(CC) $(CFLAGS) -c rectangle.cpp
 
-square.o:	square.h square.cpp rectangle.cpp rectangle.h
+square.o: square.cpp rectangle.cpp
 		$(CC) $(CFLAGS) -c square.cpp
 
-shape.o:	shape.cpp shape.h
+shape.o: shape.cpp
 		$(CC) $(CFLAGS) -c shape.cpp
 
 clean:
-		rm -rf prog $(OBJECTS) *~
+		rm -rf $(EXE) $(OBJECTS) *~
+
+install: $(EXE)
+		rm -rf $(OBJECTS) *~

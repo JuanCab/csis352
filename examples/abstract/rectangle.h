@@ -5,14 +5,14 @@
 
 class Rectangle : public Shape
 {
-   public:
-      Rectangle(double=0.0, double=0.0, int = 0, int = 0);
-      double Area() const;
-      void Display() const;
-   private:
-      double length;
-      double width;
+public:
+    Rectangle(double = 0.0, double = 0.0, int = 0, int = 0);
+    double Area() const;
+    void Display() const;
+
+private:
+    double length;
+    double width;
 };
 
 #endif
-

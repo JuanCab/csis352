@@ -2,18 +2,16 @@
 
 playingCard::playingCard(int v, suits s)
 {
-   value = v;
-   suit = s;
+    value = v;
+    suit = s;
 }
 
 int playingCard::Value() const
 {
-   return value;
+    return value;
 }
 
 suits playingCard::Suit() const
 {
-   return suit;
+    return suit;
 }
-
-
