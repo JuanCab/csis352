@@ -1,8 +1,7 @@
 #include <iostream>
+#include "shape.h"
 
 using namespace std;
-
-#include "shape.h"
 
 Shape::Shape(int xValue, int yValue)
 {

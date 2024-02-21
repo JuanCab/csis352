@@ -9,7 +9,7 @@ class Shape
 public:
     Shape(int = 0, int = 0);
     virtual void Display() const;
-    virtual double Area() const = 0; // abstract method
+    virtual double Area() const = 0; // abstract method (aka pure virtual method)
 private:
     int x;
     int y;
