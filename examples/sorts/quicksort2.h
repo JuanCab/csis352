@@ -1,37 +1,38 @@
-template<class ItemType>
+template <class ItemType>
 void Split2(ItemType values[], int first, int last,
-int& splitPt1, int& splitPt2);
+            int &splitPt1, int &splitPt2);
 
-template<class ItemType> void QS2(ItemType values[], int first, int last);
+template <class ItemType>
+void QS2(ItemType values[], int first, int last);
 
-template<class ItemType>
+template <class ItemType>
 void QuickSort2(ItemType values[], int count)
 {
-   QS2(values,0,count-1);
+    QS2(values, 0, count - 1);
 }
 
-template<class ItemType>
+template <class ItemType>
 void QS2(ItemType values[], int first, int last)
 {
     if (first < last)
     {
-	int splitPt1;
-	int splitPt2;
-	Split2(values, first, last, splitPt1, splitPt2);
-	// values[first]..values[splitPt2] <= splitVal
-	// values[splitPt1 + 1]..values[last] > splitVal
-	if (splitPt1 < last)
-	    QS2(values, splitPt1, last);
-	if (first < splitPt2)
-	    QS2(values, first, splitPt2);
+        int splitPt1;
+        int splitPt2;
+        Split2(values, first, last, splitPt1, splitPt2);
+        // values[first]..values[splitPt2] <= splitVal
+        // values[splitPt1 + 1]..values[last] > splitVal
+        if (splitPt1 < last)
+            QS2(values, splitPt1, last);
+        if (first < splitPt2)
+            QS2(values, first, splitPt2);
     }
 }
 
-template<class ItemType>
+template <class ItemType>
 void Split2(ItemType values[], int first, int last,
-int& splitPt1, int& splitPt2)
+            int &splitPt1, int &splitPt2)
 {
-    ItemType splitVal = values[(first + last)/2];
+    ItemType splitVal = values[(first + last) / 2];
     bool onCorrectSide;
     do
     {
@@ -61,8 +62,8 @@ int& splitPt1, int& splitPt2)
 #ifndef _SWAP_
 #define _SWAP_
 
-template<class ItemType>
-inline void Swap(ItemType& item1, ItemType& item2)
+template <class ItemType>
+inline void Swap(ItemType &item1, ItemType &item2)
 // Post: Contents of item1 and item2 have been swapped.
 {
     ItemType tempItem;
@@ -71,4 +72,3 @@ inline void Swap(ItemType& item1, ItemType& item2)
     item2 = tempItem;
 }
 #endif
-

@@ -2,8 +2,8 @@
 
 #ifndef _SWAP_
 #define _SWAP_
-template<class ItemType>
-inline void Swap(ItemType& item1, ItemType& item2)
+template <class ItemType>
+inline void Swap(ItemType &item1, ItemType &item2)
 // Post: Contents of item1 and item2 have been swapped.
 {
     ItemType tempItem;
@@ -13,11 +13,11 @@ inline void Swap(ItemType& item1, ItemType& item2)
 }
 #endif
 
-template<class ItemType>
+template <class ItemType>
 void SelectionSort(ItemType values[], int numValues)
 // Post: The elements in the array values are sorted by key.
 {
-    int endIndex = numValues-1;
+    int endIndex = numValues - 1;
     int indexOfMin;
     for (int current = 0; current < endIndex; current++)
     {
@@ -27,5 +27,4 @@ void SelectionSort(ItemType values[], int numValues)
                 indexOfMin = index;
         Swap(values[current], values[indexOfMin]);
     }
-
 }
