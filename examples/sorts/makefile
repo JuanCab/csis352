@@ -9,3 +9,6 @@ random.o:	random.cpp
 		$(CC) -c random.cpp
 clean:
 		rm -rf *.o *~ prog
+install: 	prog
+		rm -rf *.o
+
