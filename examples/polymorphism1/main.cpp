@@ -1,5 +1,4 @@
 #include <iostream>
-#include "circle.h"
 #include "coloredcircle.h"
 using namespace std;
 
